@@ -4,7 +4,7 @@ OPENAI_API_KEY = ""
 
 ## MistralAI Details
 MISTRALAI_MODEL = "mistral-large-latest"
-MISTRALAI_API_KEY = ""  # checking gitignore
+MISTRALAI_API_KEY = ""  ## TESTING
 
 ## AnthropicAI Details
 ANTHROPICAI_MODEL = "claude-3-opus-20240229"
