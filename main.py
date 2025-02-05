@@ -3,7 +3,7 @@ import numpy as np
 
 from concurrent.futures import ThreadPoolExecutor
 from llm_handler import send_to_llm
-from params import OUTPUT_FILE_PATH, NUM_WORKERS, PROVIDER
+from params import OUTPUT_FILE_PATH, NUM_WORKERS, PROVIDER, NUM_TURNS
 from utils import get_code_topics, get_general_topics
 
 from system_messages import (
@@ -80,7 +80,7 @@ def generate_data(
         {"role": "assistant", "content": str(gpt_outputs[1])},
     ]
 
-    for kk in range(1):
+    for kk in range(NUM_TURNS - 1):
 
         system_message_follow_up = SYSTEM_MESSAGES_FOLLOW_UP[
             np.random.randint(0, len(SYSTEM_MESSAGES_FOLLOW_UP))

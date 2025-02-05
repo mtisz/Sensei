@@ -4,7 +4,7 @@ OPENAI_API_KEY = ""
 
 ## MistralAI Details
 MISTRALAI_MODEL = "mistral-large-latest"
-MISTRALAI_API_KEY = ""  ## TESTING
+MISTRALAI_API_KEY = ""
 
 ## AnthropicAI Details
 ANTHROPICAI_MODEL = "claude-3-opus-20240229"
@@ -16,3 +16,7 @@ PROVIDER = "mistral"
 ## Generation Details
 OUTPUT_FILE_PATH = "dataset.jsonl"
 NUM_WORKERS = 4
+
+NUM_TURNS = (
+    1  ## Need to be at-least 2 for multi-turn. 1 makes it a single quesion-answer pair.
+)
